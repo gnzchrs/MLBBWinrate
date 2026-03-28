@@ -13,7 +13,6 @@ A high-performance, gaming-themed web utility designed for **Mobile Legends: Ban
 * **Reset Function:** Quickly clear data for new calculations.
 
 ## 📂 Project Structure
-```text
 MLBBWinrate/
 ├── index.html          # Main entry point & structure
 ├── favicon.png         # MLBB Tab Icon
@@ -26,8 +25,3 @@ MLBBWinrate/
 🛠️ Installation & SetupClone the repository:Bashgit clone [https://github.com/gnzchrs/MLBBWinrate.git](https://github.com/gnzchrs/MLBBWinrate.git)
 Open in Visual Studio:Open Visual Studio.Select File > Open > Folder and choose the project directory.Run:Right-click index.html and select View in Browser.📊 The Formula UsedThe "Straight Wins" calculation follows this logic:$$Wins\ Needed = \frac{(Target\ WR \times Total\ Matches) - (100 \times Current\ Wins)}{100 - Target\ WR}$$Developed for the MLBB Community. Victory belongs to the persistent!
 ---
-
-### Pro-Tip for your GitHub Repo:
-Once you paste this into your `README.md` file and push it to GitHub, the formulas and structure will automatically be formatted into a nice-looking page.
-
-**Would you like me to help you set up the "GitHub Actions" so your website updates autom
