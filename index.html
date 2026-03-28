@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLBB Winrate Pro</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj2C_9rOsrNy4gkLijee1f7sXXHmLxtiA8kw&s"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-card">
+      <div class="header">
+        <h1>WINRATE <span class="gold">TRACKER</span></h1>
+        <p class="subtitle">MOBILE LEGENDS: BANG BANG</p>
+      </div>
+
+      <div class="input-section">
+        <div class="input-group">
+          <label>TOTAL MATCHES</label>
+          <input type="number" id="tMatches" placeholder="0000" />
+        </div>
+
+        <div class="input-group">
+          <label>CURRENT WR %</label>
+          <input type="number" id="tWR" step="0.1" placeholder="00.0" />
+        </div>
+
+        <div class="input-group">
+          <label>TARGET WR %</label>
+          <input type="number" id="targetWR" placeholder="00.0" />
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="calcBtn" class="btn-primary">CALCULATE</button>
+        <button id="resetBtn" class="btn-secondary">RESET</button>
+      </div>
+
+      <div id="resultBox" class="result-display">
+        <div id="resultText"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

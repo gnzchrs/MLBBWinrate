@@ -1,0 +1,174 @@
+:root {
+  --gold: #fcc201;
+  --gold-glow: rgba(252, 194, 1, 0.4);
+  --blue-glow: #00d2ff;
+  --bg-dark: #020617;
+  /* Use a high-quality MLBB wallpaper URL */
+  --mlbb-bg: url("https://preview.redd.it/mlbb-loading-screen-for-their-naruto-collab-skins-v0-gzyfv9g7hmwe1.jpeg?auto=webp&s=48f9accf289a0a6d0e2d9e7ce42392fe8b8bdd78");
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  /* This adds a dark blue tint over the image so your text pops */
+  background:
+    linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), var(--mlbb-bg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.game-card {
+  /* Glassmorphism effect */
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 380px;
+  /* Glowing blue border similar to the MLBB UI buttons */
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  box-shadow:
+    0 0 50px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 210, 255, 0.1);
+  position: relative;
+}
+
+/* Add a "Battle Scan" line effect at the top */
+.game-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--blue-glow),
+    transparent
+  );
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px var(--blue-glow);
+  text-align: center;
+}
+
+.gold {
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--gold-glow);
+}
+.subtitle {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #334155;
+  border-radius: 4px;
+  color: var(--blue-glow);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(252, 194, 1, 0.2);
+  outline: none;
+}
+
+.button-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+button {
+  flex: 1;
+  padding: 14px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  /* Angled corners like MLBB menu buttons */
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(51, 65, 85, 0.8);
+  color: #cbd5e1;
+}
+
+button:hover {
+  filter: brightness(1.3);
+  transform: scale(1.05);
+}
+
+.result-display {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  display: none;
+  text-align: center;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.highlight {
+  color: var(--gold);
+  font-size: 1.8rem;
+  font-family: "Orbitron", sans-serif;
+  display: block;
+  margin: 5px 0;
+}
